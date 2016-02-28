@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Nosifer|Fascinate+Inline|Comfortaa:400,700,300);
+
+
+
+* {
+    margin: 0px;
+    padding: 0px
+}
+body {
+    display: block;
+    font-family: 'Century Gothic', sans-serif;
+    align-content: center;
+}
+main {
+    align-content: center;
+    padding: 10px;
+    margin:auto;
+    width: 1280px;
+    height: 800px;
+    position: relative;
+}
+section#instructions {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    color: #014b37;
+    float: left;
+}
+section#instructions ul {
+    padding: 10px;
+    font-size: 12px;
+}
+ul {
+    color: white;
+}
+li {
+    background-color: #f08b00;
+    margin-bottom: 50px;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+section#gameArea {
+    color: #90fadd;
+    float: left;
+    border: #f42a2a dotted 2px;
+    margin-bottom: 10px;
+    align-content: center;
+}
+section#gameArea {
+    width: 1000px;
+    height: 790px;
+}
+footer {
+    width: 1280px;
+    height: 50px;
+    clear: left;
+    position: relative;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 40px;
+    bottom: 0px;
+}
+footer a {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 12px;
+    color: #014b37;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #ff4848;
+    transition: 2s;
+}
+
+/*Start Screen css*/
+
+#startScreenMain {
+    padding: 50px;
+    position: relative;
+}
+#gameTitle {
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Fascinate Inline', cursive;
+    color: #3fb8af;
+}
+#startButton {
+    padding: 300px;
+}
+#startButton a {
+    padding: 10px 20px 11px !important;
+    font-size: 21px !important;
+    background-color: #F36C8C;
+    font-weight: bold;
+    text-shadow: 1px 1px #F36C8C;
+    color: #ffffff;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border: 1px solid #F36C8C;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+/*Main Menu css*/
+
+nav#levels, nav#mainMenuNav {
+   width: 200px;
+    height:300px;
+    background-color: #f08b00;
+    padding: 10px;
+    margin: 200px;
+    align-content: center;
+    position: relative;
+}
+
+nav#levels{
+    background-color: #17bfe6;
+}
+
+nav#levels ul li{
+    background-color: #17bfe6;
+}
+
+/*Story Image css*/
+
+img {
+    width: 900px;
+    height: 700px;
+}
+
+nav#continue {
+    align-content: center;
+    width: 200px;
+    height:300px;
+    margin-left: 500px;
+    
+}
+
