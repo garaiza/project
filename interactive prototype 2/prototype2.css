@@ -1,7 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nosifer|Fascinate+Inline|Comfortaa:400,700,300);
-
-
-
 * {
     margin: 0px;
     padding: 0px
@@ -10,23 +7,211 @@ body {
     display: block;
     font-family: 'Century Gothic', sans-serif;
     align-content: center;
+    background-color: #d4ffd4;
 }
 main {
     align-content: center;
-    padding: 10px;
-    margin:auto;
+    margin: auto;
     width: 1280px;
     height: 800px;
     position: relative;
+    background-color: deeppink;
 }
-section#instructions {
+
+/*Global*/
+
+ul {
+    color: white;
+}
+li {
+    margin-bottom: 50px;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 21px;
+    background-color: #ff3d7f;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 5px 1px #d30051;
+}
+nav#close,
+a,
+h2 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+}
+h2 {
+    color: #3fb8af;
+    font-size: 50px;
+}
+p {
+    font-size: 20px;
+    color: #1e0d1b;
+}
+nav ul li {
+    padding: 10px 20px;
+    font-size: 21px;
+    background-color: #3fb8af;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 5px 1px #009e8f;
+    text-align: center;
+}
+nav#close {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 50px;
+    height: 55px;
+    border: 1px white solid;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 40px;
+    border-radius: 15px;
+}
+
+/*Main sections*/
+
+#infoPopUp,
+#scoresPopUp,
+#gameScreen,
+#introductionPopUp,
+#mainMenu,
+#startScreen {
+    width: 1280px;
+    height: 800px;
+    align-content: center;
+    position: relative;
+}
+
+/*StartScreen Css*/
+
+#startScreen {
+    background-color: blueviolet;
+}
+#startScreen header#gameTitle {
+    padding-top: 200px;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Fascinate Inline', cursive;
+    color: #3fb8af;
+    width: 1280px;
+    height: 350px;
+    clear: right;
+    background-color: blue;
+}
+#startScreen nav#startButton {
+    align-content: center;
+    background-color: aqua;
+    width: 1280px;
+    height: 200px;
+    clear: left;
+    padding-top: 50px;
+}
+nav#startButton a {
+    margin-left: 570px;
+    padding: 10px 20px;
+    font-size: 21px;
+    background-color: #ff3d7f;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 5px 1px #d30051;
+    position: relative;
+}
+
+/*mainMenu Css*/
+
+section#mainMenu {
+    background-color: #d4ffd4;
+}
+section#mainMenu nav:first-child {
+    width: 1280px;
+    height: 380px;
+    padding-top: 200px;
+}
+section#mainMenu nav ul {
+    width: 200px;
+    margin-left: 560px;
+}
+section#mainMenu nav ul li {
+    background-color: #3fb8af;
+    box-shadow: 2px 5px 1px #076d64;
+}
+section#mainMenu nav:last-child {
+    width: 1280px;
+    height: 210px;
+    padding-top: 10px;
+}
+section#mainMenu nav a:first-child {
+    margin-left: 100px;
+    float: left;
+}
+section#mainMenu nav a:last-child {
+    margin-right: 100px;
+    float: right;
+}
+
+/*infoPopUp Css*/
+
+section#introductionPopUp {
+    background-color: rgb(255, 69, 0);
+    padding-top: 50px;
+}
+section#introductionPopUp section {
+    background-color: rgb(71, 172, 79);
+    width: 1000px;
+    height: 700px;
+    margin-left: 100px;
+}
+section#introductionPopUp article {
+    width: 500px;
+    margin-left: 50px;
+    background-color: azure;
+    float: left;
+}
+section#introductionPopUp section#storyImage {
+    float: left;
+    background-color: cadetblue;
+    width: 150px;
+    margin-left: 20px;
+}
+
+
+
+
+#scoresPopUp {
+    background-color: #d30051;
+}
+#introductionPopUp {
+    background-color: rgb(37, 30, 123);
+}
+#gameScreen {
+    background-color: #ceff00;
+}
+section#gameScreen nav ul li {
+    background-color: #e46c16;
+    box-shadow: 2px 5px 1px #d15400;
+}
+
+/*
+section#sideHelp {
     padding: 10px;
     margin-bottom: 10px;
     width: 250px;
     color: #014b37;
     float: left;
 }
-section#instructions ul {
+section#sideHelp ul {
     padding: 10px;
     font-size: 12px;
 }
@@ -38,7 +223,6 @@ li {
     margin-bottom: 50px;
     list-style-type: none;
 }
-
 a {
     text-decoration: none;
     color: white;
@@ -75,7 +259,7 @@ footer a:hover {
     transition: 2s;
 }
 
-/*Start Screen css*/
+/*Start Screen css
 
 #startScreenMain {
     padding: 50px;
@@ -88,57 +272,51 @@ footer a:hover {
     color: #3fb8af;
 }
 #startButton {
-    padding: 300px;
+    position: relative;
+    align-content: center;
 }
 #startButton a {
-    padding: 10px 20px 11px !important;
-    font-size: 21px !important;
+    padding: 10px 20px;
+    font-size: 21px;
     background-color: #F36C8C;
-    font-weight: bold;
-    text-shadow: 1px 1px #F36C8C;
+    font-family: 'Comfortaa';
+    font-weight: 700;
     color: #ffffff;
-    border-radius: 100px;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    border: 1px solid #F36C8C;
+    border-radius: 15px;
     cursor: pointer;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 2px 5px 1px #d30051;
+    position: absolute;
 }
 
-/*Main Menu css*/
+/*Main Menu css
 
-nav#levels, nav#mainMenuNav {
-   width: 200px;
-    height:300px;
+nav#levels,
+nav#mainMenuNav {
+    width: 200px;
+    height: 300px;
     background-color: #f08b00;
     padding: 10px;
     margin: 200px;
     align-content: center;
     position: relative;
+    
 }
-
-nav#levels{
+nav#levels {
+    background-color: #17bfe6;
+}
+nav#levels ul li {
     background-color: #17bfe6;
 }
 
-nav#levels ul li{
-    background-color: #17bfe6;
-}
-
-/*Story Image css*/
+/*Story Image css
 
 img {
     width: 900px;
     height: 700px;
 }
-
 nav#continue {
     align-content: center;
     width: 200px;
-    height:300px;
+    height: 300px;
     margin-left: 500px;
-    
 }
-

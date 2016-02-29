@@ -21,58 +21,88 @@
 
 <body>
     <main>
-          <!--Start Screen-->
-        <header id="gameTitle">
-            <h1>Clean Sea</h1>
-        </header>
+        <!--Start Screen-->
+        <section id="startScreen">
+            <header id="gameTitle">
+                <h1>Clean Sea</h1>
+            </header>
+            <nav id="startButton">
+                <a>Press to Play</a>
+            </nav>
 
-        <nav id="startButton">
-            <a>Press to Play</a>
-        </nav>
-        
-        
-             <!--Main Menu-->
-        <nav id="mainMenuNav">
+        </section>
+        <!--Main Menu-->
+        <section id="mainMenu">
+            <nav>
                 <ul>
                     <li>Level 1</li>
                     <li>Level 2</li>
                     <li>Level 3</li>
-                    
-                    <li>Scores</li>
-                    <li>Info</li>
                 </ul>
             </nav>
-                <!--Introduction and instructions Pop up-->
-        
-          <section id="storyImage">
-        <img src="plot%20image%20filler.png" alt="plot image filler">
-        </section>
-        
-            <nav id="continue">
-                    <li><a href="startScreen.html">Continue</a></li>
-            </nav>
-        
-          <!--Game Screen-->
-         <section id="instructions">
+
             <nav>
-                <ul>
-                    <li><a>Pause</a></li>
-                    <li><a href="mainMenu.html">Menu</a></li>
-                    <li><a>Restart</a></li>
-                    <li><a>Help</a></li>
-                </ul>
+                <a>Scores</a>
+                <a>Info</a>
+            </nav>
+
+        </section>
+        <!--Introduction and instructions Pop up-->
+        <section id="introductionPopUp">
+            <section>
+                <article>
+                    <h2>Oh NO!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in erat varius, hendrerit nibh vitae, vehicula dolor. In at hendrerit turpis. Sed vestibulum nec nibh vel euismod. Fusce libero enim, suscipit eu malesuada et, lobortis id diam. Fusce in varius odio, vel ornare ex. Duis nunc sem, vehicula eu vehicula a, consequat id ante. Integer congue turpis quis libero malesuada, in lobortis velit dictum.</p>
+
+                </article>
+                <section id="storyImage">
+                    <img src="plot%20image%20filler.png" alt="plot image filler">
+                </section>
+
+                <nav>
+                    <li><a>Continue</a></li>
+                </nav>
+            </section>
+            <nav id="close">X</nav>
+        </section>
+
+        <!--info Pop up-->
+        <section id="infoPopUp">
+
+            <article>
+                <p>adfskdfsdf</p>
+            </article>
+            <nav>
+                <li><a>Go Back</a></li>
             </nav>
         </section>
 
-        <section id="gameArea"></section>
-        
-        
+        <!--scores Pop up-->
+        <section id="scoresPopUp">
+            <section id="Scores"></section>
+            <nav>
+                <li><a>Go Back</a></li>
+            </nav>
+        </section>
+
+        <!--Game Screen-->
+        <section id="gameScreen">
+            <section id="sideNav">
+                <nav>
+                    <ul>
+                        <li>Pause</li>
+                        <li>Menu</li>
+                        <li>Restart</li>
+                        <li>Help</li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section id="gameArea"></section>
+        </section>
     </main>
 
-    <footer>
-        <a href="https://validator.w3.org/check?uri=referer" target="_blank">Valid HTML 5</a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">Valid CSS</a>
-    </footer>
+
 </body>
 
 </html>
