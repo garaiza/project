@@ -1,7 +1,7 @@
 console.log("hello world");
 
 function setup() {
-  var myCanvas=createCanvas(1000,790);
+  var myCanvas=createCanvas(900,790);
     //link to my id mySketch from header tag
     myCanvas.parent('gameArea')
   colorMode (HSB, 360, 100, 100);
@@ -22,10 +22,10 @@ var numPixels = 10;
 function draw() 
 {
   // clear background
-  background(181, 20, 90);
+  background(149.12, 36.98, 74.12);
  
   // set the fill color
-  fill(15, 100, 100);
+  fill(25.05, 90.35, 89.41);
  
   // black outline
   stroke(0);

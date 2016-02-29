@@ -165,16 +165,16 @@ section#mainMenu nav a:last-child {
 
 section#introductionPopUp {
     background-color: rgb(255, 69, 0);
-    padding-top: 50px;
 }
 section#introductionPopUp section {
     background-color: rgb(71, 172, 79);
     width: 1000px;
-    height: 700px;
+    height: 750px;
     margin-left: 100px;
+    padding-top: 50px;
 }
 section#introductionPopUp article {
-    width: 500px;
+    width: 300px;
     margin-left: 50px;
     background-color: azure;
     float: left;
@@ -182,141 +182,83 @@ section#introductionPopUp article {
 section#introductionPopUp section#storyImage {
     float: left;
     background-color: cadetblue;
-    width: 150px;
+    width: 575px;
+    height: 550px;
     margin-left: 20px;
 }
+section#introductionPopUp section nav {
+    width: 900px;
+    height: 100px;
+    background-color: darkorchid;
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+section#introductionPopUp section nav a {
+    float: right;
+    margin-top: 20px;
+}
 
+/*infoPopUp Css*/
 
+#infoPopUp {
+    background-color: rgb(37, 30, 123);
+}
+section#infoPopUp section {
+    background-color: #410019;
+    width: 1000px;
+    height: 750px;
+    margin-left: 100px;
+    padding-top: 50px;
+    align-content: center;
+}
+section#infoPopUp article {
+    width: 400px;
+    margin-left: 300px;
+    background-color: azure;
+    float: left;
+    margin-top: 200px;
+}
 
+/*scoresPopUp Css*/
 
 #scoresPopUp {
     background-color: #d30051;
 }
-#introductionPopUp {
-    background-color: rgb(37, 30, 123);
+section#scoresPopUp section#scores {
+    background-color: cornflowerblue;
+    width: 1000px;
+    height: 750px;
+    margin-left: 100px;
+    align-content: center;
 }
+
+/*Game Screen Css*/
+
 #gameScreen {
     background-color: #ceff00;
 }
+
 section#gameScreen nav ul li {
     background-color: #e46c16;
     box-shadow: 2px 5px 1px #d15400;
 }
 
-/*
-section#sideHelp {
+section#gameScreen section#sideNav {
     padding: 10px;
     margin-bottom: 10px;
     width: 250px;
     color: #014b37;
     float: left;
 }
-section#sideHelp ul {
+section#sideNav ul {
     padding: 10px;
     font-size: 12px;
 }
-ul {
-    color: white;
-}
-li {
-    background-color: #f08b00;
-    margin-bottom: 50px;
-    list-style-type: none;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
+/*Game Section Css*/
+
 section#gameArea {
-    color: #90fadd;
     float: left;
-    border: #f42a2a dotted 2px;
-    margin-bottom: 10px;
-    align-content: center;
-}
-section#gameArea {
     width: 1000px;
     height: 790px;
-}
-footer {
-    width: 1280px;
-    height: 50px;
-    clear: left;
-    position: relative;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 40px;
-    bottom: 0px;
-}
-footer a {
-    font-family: 'Century Gothic', sans-serif;
-    font-size: 12px;
-    color: #014b37;
-    text-decoration: none;
-}
-footer a:hover {
-    color: #ff4848;
-    transition: 2s;
-}
-
-/*Start Screen css
-
-#startScreenMain {
-    padding: 50px;
-    position: relative;
-}
-#gameTitle {
-    font-size: 70px;
-    text-align: center;
-    font-family: 'Fascinate Inline', cursive;
-    color: #3fb8af;
-}
-#startButton {
-    position: relative;
-    align-content: center;
-}
-#startButton a {
-    padding: 10px 20px;
-    font-size: 21px;
-    background-color: #F36C8C;
-    font-family: 'Comfortaa';
-    font-weight: 700;
-    color: #ffffff;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: 2px 5px 1px #d30051;
-    position: absolute;
-}
-
-/*Main Menu css
-
-nav#levels,
-nav#mainMenuNav {
-    width: 200px;
-    height: 300px;
-    background-color: #f08b00;
-    padding: 10px;
-    margin: 200px;
-    align-content: center;
-    position: relative;
-    
-}
-nav#levels {
-    background-color: #17bfe6;
-}
-nav#levels ul li {
-    background-color: #17bfe6;
-}
-
-/*Story Image css
-
-img {
-    width: 900px;
-    height: 700px;
-}
-nav#continue {
-    align-content: center;
-    width: 200px;
-    height: 300px;
-    margin-left: 500px;
 }
