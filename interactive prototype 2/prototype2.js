@@ -91,12 +91,6 @@ $(document).ready(function () {
 
 
 
-    //When you click on the first level you are directed to the 'pop up' introduction. $('section#introductionPopUp').css('visibility', 'visible').animate({
-    //top: 0, // position must be absolute or relative in the css
-    //height: 800
-    // },
-    // 5000,
-    //'swing'); 
 
     $('section#mainMenu nav ul li:first-child').click(function () {
         console.log('click level 1');
@@ -175,12 +169,7 @@ function setup() {
   //obstacles = new Group();
   collectibles = new Group();
   
-  /*for(var i=0; i<4; i++)
-    {
-    var box = createSprite(random(0, width), random(0,height));
-    box.addAnimation("normal", "assets/box0001.png", "assets/box0003.png");
-    obstacles.add(box);
-    } */
+
   
   for(var i=0; i<10; i++)
     {
@@ -230,9 +219,3 @@ function collect(collector, collected)
   //the event
   collected.remove();
 }
-
-
-
-
-
-
