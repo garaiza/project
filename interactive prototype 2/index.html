@@ -14,6 +14,7 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!--p5js link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
+    <script src="lib/p5.play.js"></script>
     <!--custom js-->
     <script type="text/javascript" src="prototype2.js"></script>
 
@@ -62,7 +63,7 @@
                     <a>Continue</a>
                 </nav>
             </section>
-            <nav id="close">X</nav>
+            <nav class="close">X</nav>
         </section>
 
         <!--info Pop up-->
@@ -70,15 +71,27 @@
             <section>
                 <article>
                     <h2>About the Game</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in erat varius, hendrerit nibh vitae, vehicula dolor. In at hendrerit turpis. Sed vestibulum nec nibh vel euismod. Fusce libero enim, suscipit eu malesuada et, lobortis id diam. Fusce in varius odio, vel ornare ex. Duis nunc sem, vehicula eu vehicula a, consequat id ante. Integer congue turpis quis libero malesuada, in lobortis velit dictum. </article>
-                <nav id="close">X</nav>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in erat varius, hendrerit nibh vitae, vehicula dolor. In at hendrerit turpis. Sed vestibulum nec nibh vel euismod. Fusce libero enim, suscipit eu malesuada et, lobortis id diam. Fusce in varius odio, vel ornare ex. Duis nunc sem, vehicula eu vehicula a, consequat id ante. Integer congue turpis quis libero malesuada, in lobortis velit dictum.</p>
+                </article>
+                <nav class="close">X</nav>
+            </section>
+        </section>
+
+        <!--instructions Pop up-->
+        <section id="instPopUp">
+            <section>
+                <article>
+                    <h2>Instructions</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in erat varius, hendrerit nibh vitae, vehicula dolor. In at hendrerit turpis. Sed vestibulum nec nibh vel euismod. Fusce libero enim, suscipit eu malesuada et, lobortis id diam. Fusce in varius odio, vel ornare ex. Duis nunc sem, vehicula eu vehicula a, consequat id ante. Integer congue turpis quis libero malesuada, in lobortis velit dictum.</p>
+                </article>
+                <nav class="close">X</nav>
             </section>
         </section>
 
         <!--scores Pop up-->
         <section id="scoresPopUp">
             <section id="scores"></section>
-             <nav id="close">X</nav>
+            <nav class="close">X</nav>
         </section>
 
         <!--Game Screen-->
@@ -94,7 +107,7 @@
                 </nav>
             </section>
 
-            
+
             <section id="gameArea"></section>
         </section>
     </main>
