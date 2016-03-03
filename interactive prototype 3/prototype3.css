@@ -1,0 +1,308 @@
+@import url(https://fonts.googleapis.com/css?family=Nosifer|Fascinate+Inline|Comfortaa:400,700,300);
+* {
+    margin: 0px;
+    padding: 0px
+}
+body {
+    display: block;
+    font-family: 'Century Gothic', sans-serif;
+    align-content: center;
+    background-color: #d4ffd4;
+}
+main {
+    align-content: center;
+    margin: auto;
+    width: 1280px;
+    height: 800px;
+    position: relative;
+}
+
+/*Global*/
+
+ul {
+    color: white;
+}
+li {
+    margin-bottom: 50px;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 21px;
+    background-color: #ff3d7f;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 5px 1px #d30051;
+}
+nav.close,
+a,
+h2 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+}
+h2 {
+    color: #3fb8af;
+    font-size: 50px;
+}
+p {
+    font-size: 20px;
+    color: #1e0d1b;
+}
+nav ul li {
+    padding: 10px 20px;
+    font-size: 21px;
+    background-color: #3fb8af;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 5px 1px #009e8f;
+    text-align: center;
+}
+nav.close {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 50px;
+    height: 55px;
+    border: 1px white solid;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*Main sections*/
+#gameMenuPopUp,
+#instPopUp,
+#infoPopUp,
+#scoresPopUp,
+#gameScreen,
+#introductionPopUp,
+#mainMenu,
+#startScreen {
+    width: 1280px;
+    height: 800px;
+    align-content: center;
+    position: absolute;
+    visibility: hidden;
+}
+
+/*StartScreen Css*/
+
+#startScreen {
+    opacity: 0;
+}
+#startScreen header#gameTitle {
+    padding-top: 200px;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Fascinate Inline', cursive;
+    color: #3fb8af;
+    width: 1280px;
+    height: 350px;
+    clear: right;
+}
+#startScreen nav#startButton {
+    align-content: center;
+    width: 1280px;
+    height: 200px;
+    clear: left;
+    padding-top: 50px;
+}
+nav#startButton a {
+    margin-left: 570px;
+    padding: 10px 20px;
+    font-size: 21px;
+    background-color: #ff3d7f;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 2px 5px 1px #d30051;
+    position: relative;
+}
+
+/*mainMenu Css*/
+
+
+section#mainMenu nav:first-child {
+    width: 1280px;
+    height: 380px;
+    padding-top: 200px;
+}
+section#gameMenu nav ul, section#mainMenu nav ul {
+    width: 200px;
+    margin-left: 560px;
+}
+section#mainMenu nav ul li {
+    background-color: #ff3d7f;
+    box-shadow: 2px 5px 1px #d30051;
+}
+section#mainMenu nav:last-child {
+    width: 1280px;
+    height: 210px;
+    padding-top: 10px;
+ 
+}
+section#mainMenu nav a:first-child {
+    margin-left: 100px;
+    float: left;
+}
+section#mainMenu nav a:last-child {
+    margin-right: 100px;
+    float: right;
+}
+section#mainMenu nav a:first-child, section#mainMenu nav a:last-child {
+   background-color: #3fb8af;
+box-shadow: 2px 5px 1px #076d64;    
+}
+
+/*Game Menu Css*/
+section#gameMenuPopUp {
+    background-color: rgba(255, 0, 0, 0.46);
+    top: 0px;
+    left: 0px;
+}
+
+section#gameMenuPopUp nav:first-child {
+    width: 1280px;
+    height: 380px;
+    padding-top: 200px;
+}
+
+/*introductionPopUp Css*/
+
+section#introductionPopUp {
+    background-color: rgba(212, 255, 212, 0.76);
+    top: 0px;
+    left: 0px;
+}
+section#introductionPopUp section {
+    border: 3px #d30051 dotted;
+    width: 1000px;
+    height: 750px;
+    margin-left: 100px;
+    padding-top: 50px;
+}
+section#introductionPopUp article {
+    width: 300px;
+    margin-left: 50px;
+    float: left;
+}
+section#introductionPopUp section#storyImage {
+    float: left;
+    background-color: cadetblue;
+    margin-left: 20px;
+    border: 0px rgba(211, 0, 81, 0) dotted;
+}
+img,
+section#introductionPopUp section#storyImage {
+    width: 575px;
+    height: 550px;
+}
+section#introductionPopUp section nav {
+    width: 900px;
+    height: 100px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+section#introductionPopUp section nav a {
+    float: right;
+    margin-top: 20px;
+}
+
+/*infoPopUp Css*/
+
+section#instPopUp,
+section#infoPopUp {
+    background-color: rgba(212, 255, 212, 0.76);
+    top: 0px;
+    left: 0px;
+}
+section#instPopUp section,
+section#infoPopUp section {
+    width: 1000px;
+    height: 750px;
+    margin-left: 100px;
+    padding-top: 50px;
+    align-content: center;
+    border: 3px #d30051 dotted;
+}
+section#instPopUp article,
+section#infoPopUp article {
+    width: 400px;
+    margin-left: 300px;
+    background-color: azure;
+    float: left;
+    margin-top: 200px;
+}
+section#infoPopUp {
+    top: 0px;
+    left: 0px;
+}
+
+section#instPopUp section nav a {
+    float: right;
+    margin-top: 20px;
+}
+section#introductionPopUp section nav {
+    width: 900px;
+    height: 100px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/*instructions*/
+
+
+/*scoresPopUp Css*/
+
+#scoresPopUp {
+    background-color: rgba(212, 255, 212, 0.76);
+}
+section#scoresPopUp section#scores {
+    background-color: cornflowerblue;
+    border: 3px #d30051 dotted;
+    width: 1000px;
+    height: 750px;
+    margin-left: 100px;
+    align-content: center;
+}
+
+/*Game Screen Css*/
+
+#gameScreen {
+    top: 0px;
+    left: 0px;
+}
+section#gameScreen nav ul li {
+    background-color: #e46c16;
+    box-shadow: 2px 5px 1px #d15400;
+}
+section#gameScreen section#sideNav {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+
+    float: left;
+}
+section#sideNav ul {
+    padding: 10px;
+    font-size: 12px;
+}
+
+/*Game Section Css*/
+
+section#gameArea {
+    float: left;
+    width: 1000px;
+    height: 790px;
+}

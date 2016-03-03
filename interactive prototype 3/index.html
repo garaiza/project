@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Prototype 2 </title>
+
+    <!--csslink-->
+
+    <link type="text/css" href="prototype3.css" rel="stylesheet">
+
+    <!--js links-->
+    <!--jQuery link-->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!--p5js link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
+    <script src="lib/p5.play.js"></script>
+    <!--custom js-->
+    <script type="text/javascript" src="prototype3.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <!--Start Screen-->
+        <section id="startScreen">
+            <header id="gameTitle">
+                <h1>Clean Sea</h1>
+            </header>
+            <nav id="startButton">
+                <a>Press to Start</a>
+            </nav>
+
+        </section>
+        <!--Main Menu-->
+        <section id="mainMenu">
+            <nav>
+                <ul>
+                    <li>Play</li>
+                </ul>
+            </nav>
+
+            <nav>
+                <a>Scores</a>
+                <a>Info</a>
+            </nav>
+
+        </section>
+        <!--Introduction and instructions Pop up-->
+        <section id="introductionPopUp">
+            <section>
+                <article>
+                    <h2>Oh NO!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in erat varius, hendrerit nibh vitae, vehicula dolor. In at hendrerit turpis. Sed vestibulum nec nibh vel euismod. Fusce libero enim, suscipit eu malesuada et, lobortis id diam. Fusce in varius odio, vel ornare ex. Duis nunc sem, vehicula eu vehicula a, consequat id ante. Integer congue turpis quis libero malesuada, in lobortis velit dictum.</p>
+
+                </article>
+                <section id="storyImage">
+                    <img src="plot%20image%20filler.png" alt="plot image filler">
+                </section>
+                <nav>
+                    <a>Continue</a>
+                </nav>
+            </section>
+            <nav class="close">X</nav>
+        </section>
+
+        <!--info Pop up-->
+        <section id="infoPopUp">
+            <section>
+                <article>
+                    <h2>About the Game</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in erat varius, hendrerit nibh vitae, vehicula dolor. In at hendrerit turpis. Sed vestibulum nec nibh vel euismod. Fusce libero enim, suscipit eu malesuada et, lobortis id diam. Fusce in varius odio, vel ornare ex. Duis nunc sem, vehicula eu vehicula a, consequat id ante. Integer congue turpis quis libero malesuada, in lobortis velit dictum.</p>
+                </article>
+                <nav class="close">X</nav>
+            </section>
+        </section>
+
+        <!--instructions Pop up-->
+        <section id="instPopUp">
+            <section>
+                <article>
+                    <h2>Instructions</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in erat varius, hendrerit nibh vitae, vehicula dolor. In at hendrerit turpis. Sed vestibulum nec nibh vel euismod. Fusce libero enim, suscipit eu malesuada et, lobortis id diam. Fusce in varius odio, vel ornare ex. Duis nunc sem, vehicula eu vehicula a, consequat id ante. Integer congue turpis quis libero malesuada, in lobortis velit dictum.</p>
+                </article>
+                <nav>
+                    <a>Play</a>
+                </nav>
+                <nav class="close">X</nav>
+            </section>
+            
+        </section>
+
+        <!--scores Pop up-->
+        <section id="scoresPopUp">
+            <section id="scores"></section>
+            <nav class="close">X</nav>
+        </section>
+        
+        <!--scores Pop up-->
+        <section id="gameMenuPopUp">
+            <section id="gameMenu">
+            <nav>
+                <ul>
+                    <li>Continue</li>
+                    <li>Go Back to Main Menu</li>
+                    <li>Help</li>
+                </ul>
+            </nav>
+            </section>
+
+        </section>
+
+        <!--Game Screen-->
+        <section id="gameScreen">
+            <section id="sideNav">
+                <nav>
+                    <ul>
+                        <li>Menu</li>
+                    </ul>
+                </nav>
+            </section>
+
+
+            <section id="gameArea"></section>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
