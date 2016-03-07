@@ -15,6 +15,7 @@ main {
     width: 1280px;
     height: 800px;
     position: relative;
+    background-color: #d30051;
 }
 
 /*Global*/
@@ -64,59 +65,99 @@ nav ul li {
 }
 nav.close {
     position: absolute;
-    right: 50px;
-    top: 50px;
-    width: 50px;
-    height: 55px;
+    right: 40px;
+    top: 40px;
+    width: 40px;
+    height: 45px;
     border: 1px white solid;
     text-align: center;
     background-color: red;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     border-radius: 15px;
     cursor: pointer;
 }
 
-/*Main sections*/
+/*Main sections 
+    visibility: hidden; this one right below will talk about having itbe absolute and the visibility anc content alignment 
 #gameMenuPopUp,
 #instPopUp,
 #infoPopUp,
 #scoresPopUp,
 #gameScreen,
 #introductionPopUp,
-#mainMenu,
 #startScreen {
     width: 1280px;
     height: 800px;
     align-content: center;
+ position: absolute;
+    
+}
+*/
+
+section#mainMenu,
+section#gameMenuPopUp,
+section#instPopUp,
+section#infoPopUp,
+section#scoresPopUp,
+section#gameScreen,
+section#introductionPopUp,
+section#startScreen {
+    align-content: center;
     position: absolute;
     visibility: hidden;
 }
-
-/*StartScreen Css*/
-
-#startScreen {
+section#gameScreen,
+section#startScreen {
+    width: 1280px;
+    height: 800px;
+}
+section#instPopUp,
+section#infoPopUp,
+section#scoresPopUp,
+section#introductionPopUp {
+    width: 1100px;
+    height: 800px;
+    margin-left: 110px;
+}
+section#mainMenu {
+    width: 1280px;
+    height: 500px;
+    background-color: yellow;
+}
+section#gameMenuPopUp {
+    width: 400px;
+    height: 400px;
+}
+section#startScreen,
+section#mainMenu {
     opacity: 0;
 }
+
+/*mainMenu Css DONT FORGET WHAT IS UP THERE*/
+
 #startScreen header#gameTitle {
-    padding-top: 200px;
+    padding-top: 100px;
     font-size: 70px;
     text-align: center;
     font-family: 'Fascinate Inline', cursive;
     color: #3fb8af;
     width: 1280px;
-    height: 350px;
+    height: 200px;
     clear: right;
+    background-color: #8bd988;
 }
-#startScreen nav#startButton {
+section#startScreen section#mainMenu nav#startButton {
     align-content: center;
     width: 1280px;
-    height: 200px;
+    height: 100px;
     clear: left;
     padding-top: 50px;
+    text-align: center;
+    background-color: #8891d9;
 }
-nav#startButton a {
-    margin-left: 570px;
+section#mainMenu nav#startButton a {
+    margin-left: 560px;
     padding: 10px 20px;
     font-size: 21px;
     background-color: #ff3d7f;
@@ -128,75 +169,68 @@ nav#startButton a {
     box-shadow: 2px 5px 1px #d30051;
     position: relative;
 }
-
-/*mainMenu Css*/
-
-
-section#mainMenu nav:first-child {
+section#startScreen section#mainMenu section#description {
     width: 1280px;
-    height: 380px;
-    padding-top: 200px;
+    height: 80px;
+    background-color: #4e800b;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 24px;
 }
-section#gameMenu nav ul, section#mainMenu nav ul {
-    width: 200px;
-    margin-left: 560px;
-}
-section#mainMenu nav ul li {
-    background-color: #ff3d7f;
-    box-shadow: 2px 5px 1px #d30051;
-}
-section#mainMenu nav:last-child {
+
+/*extra two buttoms at the bottom*/
+
+section#mainMenu nav#extraInfo {
     width: 1280px;
-    height: 210px;
-    padding-top: 10px;
- 
+    height: 80px;
+    padding-top: 50px;
+    background-color: #0b1880;
 }
 section#mainMenu nav a:first-child {
     margin-left: 100px;
     float: left;
 }
-section#mainMenu nav a:last-child {
+section#mainMenu nav#extraInfo a:last-child {
     margin-right: 100px;
     float: right;
 }
-section#mainMenu nav a:first-child, section#mainMenu nav a:last-child {
-   background-color: #3fb8af;
-box-shadow: 2px 5px 1px #076d64;    
+section#mainMenu nav a:first-child,
+section#mainMenu nav a:last-child {
+    background-color: #3fb8af;
+    box-shadow: 2px 5px 1px #076d64;
 }
 
 /*Game Menu Css*/
+
 section#gameMenuPopUp {
-    background-color: rgba(170, 33, 33, 0.38);
+    background-color: rgb(0, 0, 0);
     top: 0px;
     left: 0px;
-    width: 1280px;
-    height: 750px;
-    margin-left: 100px;
-    align-content: center;  
-    
-    
+    align-content: center;
+    margin-left: 520px;
+    margin-top: 160px;
 }
-
 section#gameMenuPopUp nav {
-    width: 1280px;
-    height: 380px;
-    padding-top: 200px;
+    padding: 20px;
 }
 
 /*introductionPopUp Css*/
 
+section#instPopUp,
 section#introductionPopUp {
-    background-color: rgba(212, 255, 212, 0.76);
+    background-color: rgba(99, 105, 99, 0.76);
     top: 0px;
     left: 0px;
 }
+section#instPopUp section,
 section#introductionPopUp section {
     border: 3px #d30051 dotted;
-    width: 1000px;
+    width: 1100px;
     height: 750px;
-    margin-left: 100px;
     padding-top: 50px;
+    background-color: rgba(4, 255, 4, 0.76);
 }
+section#instPopUp article,
 section#introductionPopUp article {
     width: 300px;
     margin-left: 50px;
@@ -213,6 +247,7 @@ section#introductionPopUp section#storyImage {
     width: 575px;
     height: 550px;
 }
+section#instPopUp section nav#play,
 section#introductionPopUp section nav {
     width: 900px;
     height: 100px;
@@ -220,6 +255,7 @@ section#introductionPopUp section nav {
     margin-left: 50px;
     margin-right: 50px;
 }
+section#instPopUp section nav a,
 section#introductionPopUp section nav a {
     float: right;
     margin-top: 20px;
@@ -227,22 +263,19 @@ section#introductionPopUp section nav a {
 
 /*infoPopUp Css*/
 
-section#instPopUp,
 section#infoPopUp {
-    background-color: rgba(212, 255, 212, 0.76);
+    background-color: rgb(35, 234, 35);
     top: 0px;
     left: 0px;
 }
-section#instPopUp section,
 section#infoPopUp section {
     width: 1000px;
     height: 750px;
-    margin-left: 100px;
+    background-color: aqua;
     padding-top: 50px;
     align-content: center;
     border: 3px #d30051 dotted;
 }
-section#instPopUp article,
 section#infoPopUp article {
     width: 400px;
     margin-left: 300px;
@@ -251,13 +284,10 @@ section#infoPopUp article {
     margin-top: 200px;
 }
 section#infoPopUp {
+    width: 1000px;
+    height: 750px;
     top: 0px;
     left: 0px;
-}
-
-section#instPopUp section nav a {
-    float: right;
-    margin-top: 20px;
 }
 section#introductionPopUp section nav {
     width: 900px;
@@ -266,20 +296,20 @@ section#introductionPopUp section nav {
     margin-left: 50px;
     margin-right: 50px;
 }
+
 /*instructions*/
 
 
 /*scoresPopUp Css*/
 
 #scoresPopUp {
-    background-color: rgba(212, 255, 212, 0.76);
+    background-color: rgba(7, 108, 7, 0.76);
 }
 section#scoresPopUp section#scores {
     background-color: cornflowerblue;
     border: 3px #d30051 dotted;
     width: 1000px;
     height: 750px;
-    margin-left: 100px;
     align-content: center;
 }
 
@@ -297,7 +327,6 @@ section#gameScreen section#sideNav {
     padding: 10px;
     margin-bottom: 10px;
     width: 250px;
-
     float: left;
 }
 section#sideNav ul {
@@ -310,5 +339,5 @@ section#sideNav ul {
 section#gameArea {
     float: left;
     width: 1000px;
-    height: 790px;
+    height: 750px;
 }

@@ -31,19 +31,6 @@ $(document).ready(function () {
 
 
 
-    //going back to the menu page from pop p
-    $('section#gameMenuPopUp section#gameMenu nav ul li:nth-child(2)').click(function () {
-        console.log('Go back to menu from game screen');
-   $('section#gameMenuPopUp').css('visibility', 'hidden');
-        $('section#gameScreen').css('visibility', 'hidden');
-        $('section#mainMenu').css('visibility', 'visible');
-
-        //prevents page from reloading
-        return false;
-    });
-
-
-
     /////check out how to overlay the main maeu page over the game screen because it kepps poping up but behind it instead of in front.////////////////////
 
     $('section#mainMenu nav:nth-child(2) a:nth-child(2)').click(function () {
@@ -55,12 +42,16 @@ $(document).ready(function () {
         });
         return false;
     });
+    
     $('section#infoPopUp nav.close').click(function () {
         console.log('click');
         $('section#infoPopUp').css('height', '0px').css('visibility', 'hidden');
         return false;
     });
 
+    
+
+    
     ///// opening and closing the pop up for scores
 
     $('section#mainMenu nav:nth-child(2) a:first-child').click(function () {
@@ -72,49 +63,65 @@ $(document).ready(function () {
         });
         return false;
     });
+    
+    
     $('section#scoresPopUp nav.close').click(function () {
         console.log('click');
         $('section#scoresPopUp').css('height', '0px').css('visibility', 'hidden');
         return false;
     });
 
-    
-    ////// opening and closing of game menu
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////// opening and game menu
     
       $('section#gameScreen section#sideNav nav ul li').click(function () {
-        console.log('click on game menu pop up and it shows up');
+        console.log('click on orange menu button');
 
         $('section#gameMenuPopUp').css('visibility', 'visible').animate({
             height: '800px',
             left: '0',
-        });
-        return false;
-    });
-    $('section#gameMenuPopUp section#gamMenu nav ul li:first-child').click(function () {
-        console.log('click to go back to game');
-        $('section#gameMenuPopUp').css('height', '0px').css('visibility', 'hidden');
+     });
         return false;
     });
     
-   
-     //this is affecting the visibility somewhow
-    $('section#gameScreen section#sideNav nav ul li').click(function () {
-        console.log('clicking on the game menu');
-
-        $('section#gameScreen section#sideNav nav ul li:nth-child(3)').css('visibility', 'hidden');
+ 
+    ////////////////////////////////
+    
+    
+    
+    
+       $('section#gameMenuPopUp section#gameMenu nav ul li:first-child').click(function () {
+        console.log('clickdfsfsdf');
+        
+        
+    $('section#gameMenuPopUp').css('visibility', 'hidden').css('height', '0px');
+      
+       
+        //prevents page from reloading
+        return false;
+         });
+          
+ 
+     $('section#gameMenuPopUp section#gameMenu nav ul li:nth-child(2)').click(function () {
+        console.log('clickdfsfsdf');
+   $('section#gameMenuPopUp').css('visibility', 'hidden');
         $('section#gameScreen').css('visibility', 'hidden');
+        $('section#mainMenu').css('visibility', 'visible');
+                  
+
 
         //prevents page from reloading
         return false;
-    }); 
-    
-    
-    
-    
-    
-    
+          });
+   
+   
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+    
+    
+    
+    
+    
 ////clicking play at the menu and the page pops up
 
     $('section#mainMenu nav ul li:first-child').click(function () {
