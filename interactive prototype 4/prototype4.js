@@ -131,7 +131,7 @@ $(document).ready(function () {
         console.log('click on orange menu button');
 
         $('section#gameMenuPopUp').css('visibility', 'visible').animate({
-            height: '400px',
+            height: '350px',
             left: '0',
         });
         return false;
