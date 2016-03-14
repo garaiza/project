@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Clean Sea Final </title>
+
+    <!--csslink-->
+
+    <link type="text/css" href="final.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!--p5js link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
+    <script src="lib/p5.play.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/addons/p5.dom.js"></script>
+   
+    
+    <!--custom js THIS IS WHERE I AM HAVING ISSUES. The green button that I made in p5 that says start game is also not in the right place. it shows up right when the main page loads. but is not supposed to be pressed until i close the instructions page. The othe issue of the canvases not working together is when I call this :   
+<script type="text/javascript" src="waveScreen.js"></script>               after or before final.js or if and when i copy and paste the code from that one on top or right below the p5 code for the game. You can test it out yourself. Wavescreen is the other canvas -->
+    
+    
+    <script type="text/javascript" src="final.js"></script>
+      
+
+</head>
+
+<body>
+    <main>
+        <!--background canvas-->
+        <section id="waveScreen"></section>
+        
+        <!--Start Screen-->
+        <section id="startScreen">
+            <header id="gameTitle">
+                <h1>Clean <span>Sea</span></h1>
+            </header>
+
+
+            <!--Main Menu-->
+            <section id="mainMenu">
+                <nav id="startButton">
+                    <a>Press to Start</a>
+                </nav>
+
+                <section id="description">
+                    <p> Help clean the oil spills in the ocean!</p>
+                </section>
+
+                <nav id="extraInfo">
+                    <a>Scores</a>
+                    <a>Info</a>
+                </nav>
+            </section>
+        </section>
+
+
+
+        <!--info Pop up-->
+        <section id="infoPopUp">
+            <section>
+                <article>
+                    <h2>About the Game</h2>
+                    <p>This game is at a prototype level right now and does not have all the features that it would ideally have if fully coded correctly. This game is meant to be an educational game that would ideally be placed in a museum setting so that it will occupy the artistic space. Although the theme and story of the game is not necessarily directly related to art, its generative art within the game shows that the interaction can be an art form in itself. It does not have all the code yet so it is a bit bare.</p>
+                </article>
+                <nav class="close">X</nav>
+            </section>
+        </section>
+
+
+
+        <!--scores Pop up-->
+        <section id="scoresPopUp">
+            <section id="scores"></section>
+            <nav class="close">X</nav>
+        </section>
+
+
+
+
+        <!--Game Screen-->
+        <section id="gameScreen">
+            <section id="sideNav">
+                <nav>
+                    <ul>
+                        <li>Menu</li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section id="gameArea"></section>
+        </section>
+
+
+        <!--Introduction and instructions Pop up-->
+        <section id="introductionPopUp">
+            <section>
+                <article>
+                    <h2>Oh NO!</h2>
+                    <p>An explosion has occurred on a drilling rig, causing the rapid spilling of oil into the surrounding bodies of water. The oil is causing intense damage to the ocean ecosystem in the surrounding area and is rapidly spreading. Luckily, a group of scientists have created a team of Super Bacteria that like to break down oil in water. Help your own Super Bacteria clean up the ocean.</p>
+                </article>
+
+                <section id="storyImage">
+                    <img src="story%20line.svg" alt="instructions for game">
+                </section>
+                <nav>
+                    <a>Instructions</a>
+                </nav>
+            </section>
+            <nav class="close">X</nav>
+        </section>
+
+
+        <!--instructions Pop up-->
+        <section id="instPopUp">
+            <section>
+                <article>
+                    <h2>Instructions</h2>
+                    <img src="instructions%20for%20game.svg" alt="instructions for game">
+                </article>
+                <nav id="play">
+                    <a>Go to Game</a>
+                </nav>
+            </section>
+        </section>
+
+
+        <section id="gameMenuPopUp">
+            <section id="gameMenu">
+                <nav>
+                    <ul>
+                        <li>Continue Level</li>
+                        <li>Go Back to Main Menu</li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </main>
+
+
+</body>
+
+</html>

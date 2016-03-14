@@ -209,7 +209,7 @@ section#gameMenuPopUp nav {
 
 section#instPopUp,
 section#introductionPopUp {
-    background-color: rgb(15, 78, 100);
+    background-color: rgb(255, 255, 255);
     top: 0px;
     left: 0px;
 }
@@ -328,5 +328,16 @@ section#sideNav ul {
 section#gameArea {
     float: left;
     width: 1000px;
-    height: 750px;
+    height: 790px;
+    z-index: auto;
+}
+
+/*Game Section Css*/
+section#waveScreen {
+    float: left;
+    width: 1280px;
+    height: 800px;
+    z-index: -1;
+    position: absolute;
+   
 }
