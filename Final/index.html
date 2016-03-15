@@ -13,15 +13,15 @@
     <!--p5js link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
     <script src="lib/p5.play.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/addons/p5.dom.js"></script>
-   
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/addons/p5.dom.js"></script>
+
+
     <!--custom js THIS IS WHERE I AM HAVING ISSUES. The green button that I made in p5 that says start game is also not in the right place. it shows up right when the main page loads. but is not supposed to be pressed until i close the instructions page. The othe issue of the canvases not working together is when I call this :   
 <script type="text/javascript" src="waveScreen.js"></script>               after or before final.js or if and when i copy and paste the code from that one on top or right below the p5 code for the game. You can test it out yourself. Wavescreen is the other canvas -->
-    
-    
+
+
     <script type="text/javascript" src="final.js"></script>
-      
+
 
 </head>
 
@@ -29,7 +29,7 @@
     <main>
         <!--background canvas-->
         <section id="waveScreen"></section>
-        
+
         <!--Start Screen-->
         <section id="startScreen">
             <header id="gameTitle">
@@ -39,17 +39,17 @@
 
             <!--Main Menu-->
             <section id="mainMenu">
-                <nav id="startButton">
+                <nav id="gameButton">
                     <a>Press to Start</a>
                 </nav>
 
                 <section id="description">
-                    <p> Help clean the oil spills in the ocean!</p>
+                    <p> Don’t let oil spoil the ocean!</p>
                 </section>
 
                 <nav id="extraInfo">
-                    <a>Scores</a>
-                    <a>Info</a>
+                    <a>Resources</a>
+                    <a>About Game</a>
                 </nav>
             </section>
         </section>
@@ -61,7 +61,8 @@
             <section>
                 <article>
                     <h2>About the Game</h2>
-                    <p>This game is at a prototype level right now and does not have all the features that it would ideally have if fully coded correctly. This game is meant to be an educational game that would ideally be placed in a museum setting so that it will occupy the artistic space. Although the theme and story of the game is not necessarily directly related to art, its generative art within the game shows that the interaction can be an art form in itself. It does not have all the code yet so it is a bit bare.</p>
+                    <p> This game is meant to be an educational game that would ideally be placed in a museum setting so that it will occupy the artistic space. Although the theme and story of the game is not necessarily directly related to art, its generative art within the game shows that the interaction can be an art form in itself. The goal is to educate as well as be a generative art piece that you, as a player can interact with.
+</p>
                 </article>
                 <nav class="close">X</nav>
             </section>
@@ -71,7 +72,31 @@
 
         <!--scores Pop up-->
         <section id="scoresPopUp">
-            <section id="scores"></section>
+            <section id="scores">
+                <section>
+                    <h2>More Information</h2>
+                     <p>This game was made in order to help bring awareness to the dangers that oil spills have on ocean ecosystems.</p>
+                    <ul>
+                        <li><a href="http://www.timeforkids.com/news/oil-spill-california/243386" target="_blank">1</a></li>
+                        <li><a href="http://www.spillcontainment.com/products/general-information/s" target="_blank">2</a></li>
+                        <li><a href="http://www.scientificamerican.com/slideshow/gulf-oil-eating-microbes-slide-show/" target="_blank">3</a></li>
+                        <li><a href="http://www.livescience.com/23126-bacteria-sucked-up-200-000-tons-of-oil-after-bp-spill.html" target="_blank">4</a></li>  
+                    </ul>
+                </section>
+                
+                
+                <section>
+                    <h2>Resources</h2>
+                    <p>Here are some links on how you can help do your part in keeping the ocean clean.</p>
+                    <ul>
+                        <li><a href="http://www.nwf.org/rrgreenzone/" target="_blank">1</a></li>
+                        <li><a href="http://education.seattlepi.com/list-ways-reduce-use-fossil-fuels-3725.html" target="_blank">2</a></li>
+                        <li><a href="http://kidshealth.org/en/kids/go-green.html" target="_blank">3</a></li>
+                        <li><a href="http://www.nwf.org/What-We-Do/Protect-Habitat/Gulf-Restoration/Oil-Spill/Surveillance-Network.aspxZZ" target="_blank">4</a></li>  
+                    </ul>
+                </section>
+
+            </section>
             <nav class="close">X</nav>
         </section>
 
@@ -96,8 +121,8 @@
         <section id="introductionPopUp">
             <section>
                 <article>
-                    <h2>Oh NO!</h2>
-                    <p>An explosion has occurred on a drilling rig, causing the rapid spilling of oil into the surrounding bodies of water. The oil is causing intense damage to the ocean ecosystem in the surrounding area and is rapidly spreading. Luckily, a group of scientists have created a team of Super Bacteria that like to break down oil in water. Help your own Super Bacteria clean up the ocean.</p>
+                    <h2>OH NO!</h2>
+                    <p>An explosion has occurred on a drilling rig, causing the rapid spilling of oil into the surrounding bodies of water. The oil is causing intense damage to the ocean ecosystem in the surrounding area and is rapidly spreading. Luckily, a group of scientists have come up with a solution that will help with cleaning the disaster: Super Bacteria. You see, not all bacteria is wants to make you sick and some actually want to help keep the world into balance.  Super Bacteria likes to break down oil in water. Help your own Super Bacteria clean up the ocean and save the wildlife!</p>
                 </article>
 
                 <section id="storyImage">

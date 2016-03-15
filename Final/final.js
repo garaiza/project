@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     //When you click on the start button the start screen goes away and you are left with the main menu
 
-    $('nav#startButton').click(function () {
+    $('nav#gameButton').click(function () {
         console.log('click start button');
 
         $('section#gameScreen').css('visibility', 'visible');
@@ -173,7 +173,7 @@ $(document).ready(function () {
 
 var obstacles;
 var collectibles;
-var asterisk;
+var player;
 var dot;
 var numberOfWhales;
 var whaleMarginTop;
@@ -186,6 +186,7 @@ var oilMarginLeft;
 var oilMarginRight;
 var score;
 var timer;
+var gameDuration;
 var secondsBefore;
 var secondsAfter;
 var oilsOnScreen;
@@ -205,10 +206,9 @@ function setup() {
     frameRate(fr);
 
     numberOfWhales = 10;
-
     oilsOnScreen = 0;
- 
     minOilsOnScreen = 50;
+
     // oil and whale margins
     whaleMarginTop = 75;
     whaleMarginBottom = 75;
@@ -221,15 +221,15 @@ function setup() {
 
     // default score and timer values
     score = 0;
-    timer = 180;
+    gameDuration = 180;
+    genStopSeconds = 15;
+    timer = gameDuration;
     secondsBefore = second();
     secondsAfter = second();
-    
-    genStopSeconds = 30;
 
     // create clear button
     startButton = createButton('Start Game');
-    startButton.position(1000, 500);
+    startButton.position(375, 345);
     startButton.style("font-family", "Century Gothic");
     startButton.style("background-color", "#81ad34");
     startButton.style("color", "#FFFFFF");
@@ -239,16 +239,13 @@ function setup() {
     startButton.style("cursor", "pointer");
     startButton.mousePressed(startGame);
 
-  
     // set gameStarted equal to false
     gameStarted = false;
 
-
     //create a user controlled sprite
-    asterisk = createSprite(400, 200);
-    asterisk.addAnimation("normal", "asterisk_normal0001.png", "asterisk_normal0003.png");
-
-    asterisk.addAnimation("stretch", "asterisk_stretching0001.png", "asterisk_stretching0008.png");
+    player = createSprite(400, 200);
+    player.addAnimation("normal", "player_normal0001.png", "player_normal0002.png");
+    player.addAnimation("eat", "player_eating0001.png", "player_eating0007.png");
 
     //create 2 groups
     //obstacles = new Group();
@@ -260,11 +257,13 @@ function setup() {
         box.addAnimation("normal", "whale/whale_0001.png", "whale/whale_0007.png");
         obstacles.add(box);
     }
-   
+
 }
 
 function draw() {
     background(94.15, 34.17, 94.12);
+
+    if (timer <= 0) gameOver();
 
     if (gameStarted == true) {
 
@@ -307,47 +306,32 @@ function draw() {
         }
 
         //if no arrow input set velocity to 0
-        asterisk.velocity.x = (mouseX - asterisk.position.x) / 10;
-        asterisk.velocity.y = (mouseY - asterisk.position.y) / 10;
+        player.velocity.x = (mouseX - player.position.x) / 10;
+        player.velocity.y = (mouseY - player.position.y) / 10;
 
-        if (oilsOnScreen <  minOilsOnScreen && timer > genStopSeconds) {
+        if (oilsOnScreen < minOilsOnScreen && timer > genStopSeconds) {
             dot = createSprite(random(oilMarginLeft, width - oilMarginRight), random(oilMarginTop, height - oilMarginBottom));
             dot.addAnimation("oil1/one_oil_0001.png", "oil1/one_oil_0002.png", "oil1/one_oil_0003.png", "oil1/one_oil_0004.png", "oil1/one_oil_0005.png", "oil1/one_oil_0006.png", "oil1/one_oil_0007.png");
-
             collectibles.add(dot);
-
 
             dot = createSprite(random(oilMarginLeft, width - oilMarginRight), random(oilMarginTop, height - oilMarginBottom));
             dot.addAnimation("oil2/two_oil_0001.png", "oil2/two_oil_0002.png", "oil2/two_oil_0003.png", "oil2/two_oil_0004.png", "oil2/two_oil_0005.png", "oil2/two_oil_0006.png", "oil2/two_oil_0007.png");
-
             collectibles.add(dot);
-
-
 
             dot = createSprite(random(oilMarginLeft, width - oilMarginRight), random(oilMarginTop, height - oilMarginBottom));
             dot.addAnimation("oil3/three_oil_0001.png", "oil3/three_oil_0002.png", "oil3/three_oil_0003.png", "oil3/three_oil_0004.png", "oil3/three_oil_0005.png", "oil3/three_oil_0006.png", "oil3/three_oil_0007.png");
-
             collectibles.add(dot);
-
 
             dot = createSprite(random(oilMarginLeft, width - oilMarginRight), random(oilMarginTop, height - oilMarginBottom));
             dot.addAnimation("oil4/four_oil_0001.png", "oil4/four_oil_0002.png", "oil4/four_oil_0003.png", "oil4/four_oil_0004.png", "oil4/four_oil_0005.png", "oil4/four_oil_0006.png", "oil4/four_oil_0007.png");
-
             collectibles.add(dot);
 
             oilsOnScreen += 4;
         }
         //if mouse button is pressed then asterisk displaces all the sprites in the group obstacles
         //if mouse button is NOT pressed then asterisk collides against all the sprites in the group obstacles
-        //if (mouseIsPressed)
-        //   asterisk.displace(obstacles)
-        //else
-        //  asterisk.collide(obstacles)
-        //if mouse button is pressed then asterisk displaces all the sprites in the group obstacles
-        //if mouse button is NOT pressed then asterisk collides against all the sprites in the group obstacles
         if (mouseIsPressed) {
-            print(mouseIsPressed);
-            asterisk.displace(obstacles);
+            player.displace(obstacles);
             for (var i = 0; i < numberOfWhales; i++) {
                 var w = obstacles[i];
                 if (w.position.x < whaleMarginLeft) w.position.x = whaleMarginLeft;
@@ -356,23 +340,22 @@ function draw() {
                 if (w.position.y > height - whaleMarginBottom) w.position.y = height - whaleMarginBottom;
             }
         } else {
-            print(mouseIsPressed);
-            asterisk.collide(obstacles);
+            player.collide(obstacles);
         }
 
         //I can define a function to be called upon collision, overlap, displace or bounce
         //see collect() below no semicolon
         //asterisk.overlap(collectibles, collect)
         //if asterisk collides with oil then increase the score by one
-        if (asterisk.overlap(collectibles, collect)) {
+        if (player.overlap(collectibles, collect)) {
 
             score++;
             oilsOnScreen--;
         }
 
         //if the animation is "stretch" and it reached its last frame
-        if (asterisk.getAnimationLabel() == "stretch" && asterisk.animation.getFrame() == asterisk.animation.getLastFrame()) {
-            asterisk.changeAnimation("normal");
+        if (player.getAnimationLabel() == "eat" && player.animation.getFrame() == player.animation.getLastFrame()) {
+            player.changeAnimation("normal");
         }
 
         drawSprites();
@@ -392,6 +375,20 @@ function startGame() {
 
 }
 
+function gameOver() {
+    fill(0);
+    noStroke();
+    textSize(24);
+    text("Your score is: " + score + "Barrels of oil cleaned", 400, 400);
+
+    startButton.show();
+    gameStarted = false;
+    timer = gameDuration;
+    score = 0;
+    secondsBefore = second();
+    secondsAfter = second();
+}
+
 //the first parameter will be the sprite (individual or from a group) 
 //calling the function
 //the second parameter will be the sprite (individual or from a group)
@@ -399,7 +396,7 @@ function startGame() {
 function collect(collector, collected) {
     //collector is another name for asterisk
     //show the animation
-    collector.changeAnimation("stretch");
+    collector.changeAnimation("eat");
     collector.animation.rewind();
     //collected is the sprite in the group collectibles that triggered 
     //the event

@@ -17,7 +17,6 @@ main {
     position: relative;
 }
 
-
 /*Global*/
 
 ul {
@@ -108,7 +107,6 @@ section#introductionPopUp {
 section#mainMenu {
     width: 1280px;
     height: 500px;
-   
 }
 section#gameMenuPopUp {
     width: 400px;
@@ -130,23 +128,20 @@ section#mainMenu {
     width: 1280px;
     height: 200px;
     clear: right;
-    
 }
-
 #startScreen header#gameTitle h1 span {
     font-family: 'Nosifer', cursive;
     color: #1e0d1b;
 }
-section#startScreen section#mainMenu nav#startButton {
+section#startScreen section#mainMenu nav#gameButton {
     align-content: center;
     width: 1280px;
     height: 100px;
     clear: left;
     padding-top: 50px;
     text-align: center;
-  
 }
-section#mainMenu nav#startButton a {
+section#mainMenu nav#gameButton a {
     margin-left: 560px;
     padding: 10px 20px;
     font-size: 21px;
@@ -166,6 +161,12 @@ section#startScreen section#mainMenu section#description {
     text-align: center;
     font-size: 24px;
 }
+section#startScreen section#mainMenu section#description p {
+    font-family: "Comfortaa";
+    font-weight: 700;
+    color: #e36d25;
+    font-size: 30px;
+}
 
 /*extra two buttoms at the bottom*/
 
@@ -173,7 +174,6 @@ section#mainMenu nav#extraInfo {
     width: 1280px;
     height: 80px;
     padding-top: 50px;
-
 }
 section#mainMenu nav a:first-child {
     margin-left: 100px;
@@ -217,7 +217,6 @@ section#introductionPopUp section {
     width: 1100px;
     height: 750px;
     padding-top: 50px;
-    
 }
 section#instPopUp article,
 section#introductionPopUp article {
@@ -252,9 +251,11 @@ section#introductionPopUp section nav a {
 /*infoPopUp Css*/
 
 section#infoPopUp {
-    background-color: rgba(121, 189, 154, 0.82);
+    background-color: rgba(255, 255, 255, 0.82);
     top: 0px;
     left: 0px;
+      width: 1000px;
+    height: 750px;
 }
 section#infoPopUp section {
     width: 1000px;
@@ -264,17 +265,16 @@ section#infoPopUp section {
     border: 3px #d30051 dotted;
 }
 section#infoPopUp article {
-    width: 400px;
-    margin-left: 300px;
-    background-color: azure;
+    width: 500px;
+    margin-left: 250px;
+    background-color: #ffffff;
+    padding: 10px;
     float: left;
     margin-top: 200px;
 }
-section#infoPopUp {
-    width: 1000px;
-    height: 750px;
-    top: 0px;
-    left: 0px;
+
+section#infoPopUp article h2 {
+    margin-bottom: 50px;
 }
 section#introductionPopUp section nav {
     width: 900px;
@@ -290,14 +290,41 @@ section#introductionPopUp section nav {
 /*scoresPopUp Css*/
 
 #scoresPopUp {
-    background-color: rgba(121, 189, 154, 0.82);
+    background-color: rgba(255, 255, 255, 0.82);
 }
 section#scoresPopUp section#scores {
-    background-color: cornflowerblue;
-    border: 3px #d30051 dotted;
+    background-color: rgba(255, 255, 255, 0.82);
     width: 1000px;
     height: 750px;
     align-content: center;
+}
+section#scoresPopUp section#scores section {
+    background-color: rgb(255, 255, 255);
+    margin-top: 100px;
+    padding: 60px;
+    float: left;
+    width: 325px;
+    height: 500px;
+    text-align: left;
+    margin-left: 30px;
+}
+section#scoresPopUp section#scores section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+section#scoresPopUp section#scores section p {
+    margin-bottom: 50px;
+}
+section#scoresPopUp section#scores section:last-child p {
+    margin-bottom: 70px;
+}
+section#scoresPopUp section#scores section:last-child h2 {
+    margin-bottom: 70px;
+}
+section#scoresPopUp section#scores section ul li a {
+    background-color: #e46c16;
+    box-shadow: 2px 5px 1px #d15400;
+    width: 25px;
 }
 
 /*Game Screen Css*/
@@ -331,11 +358,11 @@ section#gameArea {
 }
 
 /*Game Section Css*/
+
 section#waveScreen {
     float: left;
     width: 1280px;
     height: 800px;
     z-index: -1;
     position: absolute;
-   
 }
