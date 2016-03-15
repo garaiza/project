@@ -221,7 +221,7 @@ function setup() {
 
     // default score and timer values
     score = 0;
-    gameDuration = 180;
+    gameDuration = 60;
     genStopSeconds = 15;
     timer = gameDuration;
     secondsBefore = second();
@@ -229,7 +229,7 @@ function setup() {
 
     // create clear button
     startButton = createButton('Start Game');
-    startButton.position(375, 345);
+    startButton.position(20, 345);
     startButton.style("font-family", "Century Gothic");
     startButton.style("background-color", "#81ad34");
     startButton.style("color", "#FFFFFF");

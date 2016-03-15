@@ -50,7 +50,7 @@ p {
     font-size: 20px;
     color: #1e0d1b;
 }
-nav ul li {
+ nav ul li {
     padding: 10px 20px;
     font-size: 21px;
     background-color: #3fb8af;
@@ -157,7 +157,7 @@ section#mainMenu nav#gameButton a {
 section#startScreen section#mainMenu section#description {
     width: 1280px;
     height: 80px;
-    padding-top: 80px;
+padding-top: 80px;
     text-align: center;
     font-size: 24px;
 }
@@ -192,16 +192,23 @@ section#mainMenu nav a:last-child {
 /*Game Menu Css*/
 
 section#gameMenuPopUp {
-    background-color: rgba(63, 184, 175, 0.71);
+    background-color: #d15400;
     top: 0px;
     left: 0px;
     align-content: center;
     margin-left: 520px;
     margin-top: 160px;
-}
-section#gameMenuPopUp nav {
     padding: 20px;
 }
+
+section#gameMenuPopUp h2 {
+    color: #ffffff;
+    margin-bottom: 120px;
+    font-size: 24px;
+    text-align: center;
+    
+}
+
 
 /*introductionPopUp Css*/
 
@@ -273,6 +280,7 @@ section#infoPopUp article {
     margin-top: 200px;
 }
 
+
 section#infoPopUp article h2 {
     margin-bottom: 50px;
 }
@@ -285,10 +293,11 @@ section#introductionPopUp section nav {
 }
 
 /*instructions*/
+canvas {
+    cursor: none;
+}
 
-
-/*scoresPopUp Css*/
-
+/*informationPopUp Css*/
 #scoresPopUp {
     background-color: rgba(255, 255, 255, 0.82);
 }
@@ -300,7 +309,7 @@ section#scoresPopUp section#scores {
 }
 section#scoresPopUp section#scores section {
     background-color: rgb(255, 255, 255);
-    margin-top: 100px;
+    
     padding: 60px;
     float: left;
     width: 325px;
@@ -321,10 +330,23 @@ section#scoresPopUp section#scores section:last-child p {
 section#scoresPopUp section#scores section:last-child h2 {
     margin-bottom: 70px;
 }
-section#scoresPopUp section#scores section ul li a {
+section#scoresPopUp section#scores section nav ul li {
+    padding: 10px 20px;
+    font-size: 21px;
     background-color: #e46c16;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
     box-shadow: 2px 5px 1px #d15400;
-    width: 25px;
+    text-align: center;
+}
+section#scoresPopUp section#scores section nav ul li a{
+    background-color: #e46c16;
+    border-radius: 0px;
+  font-size: 20px;
+    box-shadow: none;
 }
 
 /*Game Screen Css*/
